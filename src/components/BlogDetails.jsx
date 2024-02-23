@@ -4,24 +4,24 @@ import { NavLink } from 'react-router-dom'
 const BlogDetails = ({post}) => {
   return (
     <div>
-        <NavLink to={`/blog/${post.id}`}>
-            <span>{post.title}</span>
-        </NavLink>
+        {/* <NavLink to={`/blog/${post.id}`} > */}
+            <span className='font-bold'>{post.title}</span>
+        {/* </NavLink> */}
         <p>
             By
-            <span>{post.author}</span>
+            <span className='italic'>{post.author}</span>
             on {" "}
             <NavLink to={`/categories/${post.category.replaceAll(" ", "-")}`}>
-                <span>{post.category}</span>
+                <span className='underline'>{post.category}</span>
             </NavLink>
         </p>
         <p>
-            Posted on {post.data}
+            Posted on {post.date}
         </p>
         <p>
             {post.content}
         </p>
-        <div>
+        <div className='flex flex-wrap gap-x-3 underline'>
             {post.tags.map( (tag, index)=>(
                 <NavLink to={`/tags/${tag.replaceAll(" ", "-")}`}>
                     <span>{`#${tag}`}</span>

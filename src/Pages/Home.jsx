@@ -10,7 +10,7 @@ const Home = () => {
       <Blogs/>
       <Paginaton/>
   </div>
-  )
+  );
 }
 
 export default Home

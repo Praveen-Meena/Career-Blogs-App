@@ -24,7 +24,7 @@ const TagPage = () => {
             <Blogs/>
             <Pagination/>
         </div>
-    )
+    );
 }
 
 export default TagPage

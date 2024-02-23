@@ -23,7 +23,7 @@ const CategoryPage = () => {
             <Blogs/>
             <Pagination/>
         </div>
-    )
+    );
 }
 
 export default CategoryPage

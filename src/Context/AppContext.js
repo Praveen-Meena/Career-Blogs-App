@@ -17,6 +17,7 @@ export default function AppContextProvider({children})
   // Load the values from fetch API
   const fetchBlogPosts = async (page=1, tag=null, category) => {
       setLoading(true); 
+
       let url = `${baseUrl}?page=${page}`; 
       if(tag){
         url += `&tag=${tag}`; 
